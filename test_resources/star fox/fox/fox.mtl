@@ -1,0 +1,100 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 13.12.2011 14:00:02
+
+newmtl Holster001_jpg
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Holster001.jpg
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Holster001.jpg
+
+newmtl Boots001_jpg
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Boots001.jpg
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Boots001.jpg
+
+newmtl EyeIris1_PNG
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\EyeIris1.PNG
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\EyeIris1.PNG
+
+newmtl Headgear001_jpg
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Headgear001.jpg
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Headgear001.jpg
+
+newmtl Face001_jpg
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Face001.jpg
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Face001.jpg
+
+newmtl Pants001_jpg
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Pants001.jpg
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Pants001.jpg
+
+newmtl Jacket001_jpg
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Jacket001.jpg
+	map_Kd C:\Documents and Settings\user\”ÿÕ «·„ﬂ »\model\fox\Jacket001.jpg

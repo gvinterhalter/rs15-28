@@ -1,0 +1,6 @@
+glm: OpenGl math library
+glfw: An OpenGl library
+glew: The OpenGl extension library
+bullet: physics engine
+fbx SDK: portable 3d scene format Autodesk
+

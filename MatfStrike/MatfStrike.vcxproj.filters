@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\nodes\mesh.cpp" />
+    <ClCompile Include="src\nodes\node.cpp" />
+    <ClCompile Include="src\nodes\shdProgram.cpp" />
+    <ClCompile Include="src\nodes\Transform.cpp" />
+    <ClCompile Include="src\strike.cpp" />
+    <ClCompile Include="src\ImportExport.cpp" />
+    <ClCompile Include="src\Worker.cpp" />
+    <ClCompile Include="src\Task.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\nodes\mesh.h" />
+    <ClInclude Include="include\nodes\node.h" />
+    <ClInclude Include="include\nodes\shdProgram.h" />
+    <ClInclude Include="include\nodes\Transform.h" />
+    <ClInclude Include="include\ImportExport.h" />
+    <ClInclude Include="include\Worker.h" />
+    <ClInclude Include="include\Task.h" />
+  </ItemGroup>
+</Project>

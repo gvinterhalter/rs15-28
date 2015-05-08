@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatfStrike", "MatfStrike.vcxproj", "{8D28FFC7-C3AD-4492-9D75-8FB769855A44}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E6BFA1A4-04C0-4CBE-9668-E379B41BEF46} = {E6BFA1A4-04C0-4CBE-9668-E379B41BEF46}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatfEngine", "..\MatfEngine\MatfEngine.vcxproj", "{E6BFA1A4-04C0-4CBE-9668-E379B41BEF46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D28FFC7-C3AD-4492-9D75-8FB769855A44}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8D28FFC7-C3AD-4492-9D75-8FB769855A44}.Debug|Win32.Build.0 = Debug|Win32
+		{8D28FFC7-C3AD-4492-9D75-8FB769855A44}.Release|Win32.ActiveCfg = Release|Win32
+		{8D28FFC7-C3AD-4492-9D75-8FB769855A44}.Release|Win32.Build.0 = Release|Win32
+		{E6BFA1A4-04C0-4CBE-9668-E379B41BEF46}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E6BFA1A4-04C0-4CBE-9668-E379B41BEF46}.Debug|Win32.Build.0 = Debug|Win32
+		{E6BFA1A4-04C0-4CBE-9668-E379B41BEF46}.Release|Win32.ActiveCfg = Release|Win32
+		{E6BFA1A4-04C0-4CBE-9668-E379B41BEF46}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
