@@ -21,6 +21,8 @@ namespace mfe {
 
 class Transform : public Node
 {
+// 'mfe::Transform' : object allocated on the heap may not be aligned 16\
+// Treba overridovati operator new i delete, verovatno da sprecimo ovaj warning, mozda nam bude pravio probleme posle
 public:
 	Transform(const FbxNode * pNode, Transform * parent = 0);
 
