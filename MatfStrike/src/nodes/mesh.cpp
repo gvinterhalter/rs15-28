@@ -28,10 +28,6 @@ namespace mfe{
 		glVertexAttribPointer(attrPos, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (void*)(6 * sizeof(GLfloat)));
 		glEnableVertexAttribArray(attrPos);
 
-		attrPos = glGetUniformLocation(m_sp, "projectionMatrix");
-		glUniformMatrix4fv(attrPos, 1, GL_FALSE, & cam.projection[0][0]);
-		attrPos = glGetUniformLocation(m_sp, "viewMatrix");
-		glUniformMatrix4fv(attrPos, 1, GL_FALSE, & cam.view[0][0]);
 		attrPos = glGetUniformLocation(m_sp, "modelMatrix");
 		m_transformIndex = attrPos;
 		glUniformMatrix4fv(m_transformIndex, 1, GL_FALSE, & m_transform[0][0]);

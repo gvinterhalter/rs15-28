@@ -1,17 +1,32 @@
 #include "Scene.h"
 
+
 namespace mfe{
+
 
 	Scene::Scene(int w, int h, const  std::string & t)
 		: m_windowWidth(w), m_windowHeight(h), m_windowTittle(t), m_camera(w, h)
 	{
-		initializeGraphics();
+		initializeGraphics(NULL);
+		gloabl_camera = & m_camera;
+	}
+
+	Scene::Scene(const std::string & t)
+		: m_windowTittle(t), m_camera(640, 480)
+	{
+
+		auto * monitor = glfwGetPrimaryMonitor();
+		auto * mode = glfwGetVideoMode(monitor);
+		m_camera = PerspectiveCamera(mode->width, mode->height);
+
+		initializeGraphics(monitor);
+		gloabl_camera = & m_camera;
 	}
 
 	Scene::~Scene() { }
 
 
-	void Scene::initializeGraphics(){
+	void Scene::initializeGraphics(GLFWmonitor * monitor){
 		// glfw
 		if (glfwInit() == false){
 			std::cerr << "Error, can't initialise glfw" << std::endl;
@@ -28,7 +43,8 @@ namespace mfe{
 		glfwWindowHint(GLFW_DOUBLEBUFFER, GL_TRUE);
 		glfwWindowHint(GLFW_SRGB_CAPABLE, true);
 
-		m_window = glfwCreateWindow(m_windowWidth, m_windowHeight, m_windowTittle.c_str(), NULL, NULL);
+		m_window = glfwCreateWindow(m_windowWidth, m_windowHeight, m_windowTittle.c_str(),
+			monitor, NULL);
 
 		if (!m_window){
 			std::cerr << "Error, can't create window" << std::endl;
@@ -37,6 +53,15 @@ namespace mfe{
 		}
 
 		glfwMakeContextCurrent(m_window);
+
+		// set callbacks for mouse and keyboard
+		glfwSetKeyCallback(m_window, key_callback);
+		glfwSetMouseButtonCallback(m_window, mouseBtn_callback);
+		glfwSetScrollCallback(m_window, scroll_callback);
+		glfwSetCursorPosCallback(m_window, cursorPos_callback);
+
+		glfwSetCursorPos(m_window,  m_windowWidth / 2, m_windowHeight / 2);
+		glfwSetCursor( m_window, glfwCreateStandardCursor(GLFW_CROSSHAIR_CURSOR) );
 
 		// glew
 		glewExperimental = GL_TRUE;
@@ -55,13 +80,25 @@ namespace mfe{
 		while (!glfwWindowShouldClose(m_window)){
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+
+			// Update Camera movment
+			GLint attrPos;
+			m_camera.calcTransform();
+			attrPos = glGetUniformLocation(m_shdProgram->program(), "projectionMatrix");
+			glUniformMatrix4fv(attrPos, 1, GL_FALSE, &m_camera.projection[0][0]);
+			attrPos = glGetUniformLocation(m_shdProgram->program(), "viewMatrix");
+			glUniformMatrix4fv(attrPos, 1, GL_FALSE, &m_camera.view[0][0]);
+
+			// render meshes
 			for (auto & x : m_meshList){
-				x.rotateY(2.f);
+				x.rotateY(4.f);
 				x.draw();
 			}
 
 			glfwSwapBuffers(m_window);
 			glfwPollEvents();
+
+			std::this_thread::sleep_for(std::chrono::milliseconds(1000/30));
 
 			// ESC, for full screen windows
 			if (glfwGetKey(m_window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -69,6 +106,7 @@ namespace mfe{
 
 		}
 	}
+	
 
 	void Scene::buildDefaultShaders(){
 		try {
@@ -84,5 +122,8 @@ namespace mfe{
 	void Scene::addMesh(GLfloat * buff, GLuint size){
 		m_meshList.emplace_back(Mesh(buff, size, m_shdProgram, m_camera));
 	}
+
+
+
 
 }
