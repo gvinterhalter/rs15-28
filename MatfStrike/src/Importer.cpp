@@ -82,24 +82,24 @@ namespace mfe{
 				// ********************************
 				int id = mesh->GetPolygonVertex(polygon, vertex);
 				//std::cout << "<" << controlPoints[id][0] << " " << controlPoints[id][1] << " " << controlPoints[id][2] << ">, " ;
-				*b   = controlPoints[id][0];
-				*++b = controlPoints[id][1];
-				*++b = controlPoints[id][2];
+				*b   = (GLfloat) controlPoints[id][0];
+				*++b = (GLfloat) controlPoints[id][1];
+				*++b = (GLfloat) controlPoints[id][2];
 				
 				// ********************************
 				FbxVector4 normal;
 				mesh->GetPolygonVertexNormal(polygon, vertex, normal);
 				//std::cout << "<" << normal[0] << " " << normal[1] << " " << normal[2] << ">, ";
-				*++b = normal[0];
-				*++b = normal[1];
-				*++b = normal[2];
+				*++b = (GLfloat) normal[0];
+				*++b = (GLfloat) normal[1];
+				*++b = (GLfloat) normal[2];
 				// ********************************
 				FbxVector2 uv;
 				bool bla = true;
 				mesh->GetPolygonVertexUV(polygon, vertex, uvSetNames[0], uv, bla);
 				//std::cout << "<" << uv[0] << " " << uv[1] << ">";
-				*++b = uv[0];
-				*++b = uv[1];
+				*++b = (GLfloat) uv[0];
+				*++b = (GLfloat) uv[1];
 				b++;
 				// ********************************
 				//std::cout << std::endl;

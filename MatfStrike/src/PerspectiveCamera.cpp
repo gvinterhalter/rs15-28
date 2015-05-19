@@ -1,6 +1,6 @@
 #include "PerspectiveCamera.h"
 
-#include <iostream>;
+#include <iostream>
 
 namespace mfe{
 

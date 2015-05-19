@@ -116,6 +116,7 @@ namespace mfe{
 			m_shdProgram = new  ShdProgram(m_vrtxShader, m_fragShader, "outColor");
 		}
 		catch (Exception & e){
+			e.what(); // da mi kompajler ne prijavljuje warning
 			exit(EXIT_FAILURE);
 		}
 	}

@@ -1,4 +1,5 @@
 #pragma once
+#define GLEW_STATIC // jer staticki linkujemo  glew
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>	
