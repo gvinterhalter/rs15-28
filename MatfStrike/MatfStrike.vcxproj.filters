@@ -9,9 +9,9 @@
     <ClCompile Include="src\Importer.cpp" />
     <ClCompile Include="src\nodes\shdProgram.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
-    <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\glfw\Window.cpp" />
     <ClCompile Include="src\glfw\Callback.cpp" />
+    <ClCompile Include="src\nodes\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\nodes\mesh.h" />

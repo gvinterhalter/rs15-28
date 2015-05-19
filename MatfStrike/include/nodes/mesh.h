@@ -1,11 +1,8 @@
 #pragma once
 #define GLEW_STATIC // we need this because we link with glew32s.lib (static)
 
-#include <fbxsdk.h>
 #include <GL/glew.h>
-#include <GLFW/glfw3.h>
-
-#include "PerspectiveCamera.h"
+#include <glm/glm.hpp>
 
 namespace mfe{
 

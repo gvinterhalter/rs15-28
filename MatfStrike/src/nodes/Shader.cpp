@@ -1,5 +1,10 @@
 #include "nodes/Shader.h"
 
+#include <iostream>
+#include <fstream>
+#include <iostream>
+
+#include "Exception.h"
 
 namespace mfe{
 

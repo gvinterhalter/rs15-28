@@ -6,7 +6,6 @@
 
 #include <vector>
 
-#include "Exception.h"
 #include "nodes/Shader.h"
 #include "nodes/mesh.h"
 #include "PerspectiveCamera.h"

@@ -2,18 +2,12 @@
 #define GLEW_STATIC // jer staticki linkujemo  glew
 
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>	
-#include <glm/gtc/type_ptr.hpp>	
-
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 #include <string>
 #include <vector>
 #include <iostream>
-#include <fstream>
-#include <chrono>
-#include <thread>
 
 #include "nodes/shdProgram.h"
 #include "nodes/mesh.h"
@@ -24,7 +18,6 @@
 namespace mfe{
 
 	static PerspectiveCamera * gloabl_camera;
-
 
 	class Scene
 	{

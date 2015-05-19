@@ -10,5 +10,6 @@ void main() {
    mat4 modelView = viewMatrix * modelMatrix;
    mat4 modelViewProjection = projectionMatrix * modelView;
    gl_Position = modelViewProjection * vec4(P, 1.0);
-   Nn = normalize(viewMatrix * vec4(N, 0.0));
+   //Nn = normalize(viewMatrix * vec4(N, 0.0));
+   Nn = vec4(N, 0.0);
 }

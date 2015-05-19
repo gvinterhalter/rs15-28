@@ -1,6 +1,7 @@
 #include <nodes/ShdProgram.h>
 
 #include <iostream>
+#include "Exception.h"
 
 namespace mfe{
 
