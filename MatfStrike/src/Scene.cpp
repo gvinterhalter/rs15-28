@@ -89,10 +89,11 @@ namespace mfe{
 			attrPos = glGetUniformLocation(m_shdProgram->program(), "viewMatrix");
 			glUniformMatrix4fv(attrPos, 1, GL_FALSE, &m_camera.view[0][0]);
 
-			// render meshes
-			for (auto & x : m_meshList){
-				x.rotateY(4.f);
-				x.draw();
+			m_shdProgram->useProgram();
+			// render meshes in shaderProgram
+			for (auto * x : m_shdProgram->meshList()){
+				x->rotateY(4.f);
+				x->draw();
 			}
 
 			glfwSwapBuffers(m_window);
@@ -119,8 +120,9 @@ namespace mfe{
 		}
 	}
 
-	void Scene::addMesh(GLfloat * buff, GLuint size){
-		m_meshList.emplace_back(Mesh(buff, size, m_shdProgram, m_camera));
+	void Scene::addMesh(Mesh * mesh){
+		m_meshList.push_back(mesh);
+		m_shdProgram->addMesh(mesh);
 	}
 
 

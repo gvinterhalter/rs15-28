@@ -106,7 +106,7 @@ namespace mfe{
 			}
 		}
 
-		m_scene.addMesh(buff, n);
+		m_scene.addMesh(new Mesh(buff, n));
 	}
 
 }

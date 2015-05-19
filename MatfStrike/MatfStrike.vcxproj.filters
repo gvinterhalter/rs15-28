@@ -9,6 +9,8 @@
     <ClCompile Include="src\Importer.cpp" />
     <ClCompile Include="src\nodes\shdProgram.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\nodes\mesh.h" />
@@ -20,5 +22,7 @@
     <ClInclude Include="include\Importer.h" />
     <ClInclude Include="include\Exception.h" />
     <ClInclude Include="include\PerspectiveCamera.h" />
+    <ClInclude Include="include\Window.h" />
+    <ClInclude Include="include\nodes\Shader.h" />
   </ItemGroup>
 </Project>

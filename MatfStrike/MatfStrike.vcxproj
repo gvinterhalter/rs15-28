@@ -82,6 +82,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\PerspectiveCamera.cpp" />
     <ClCompile Include="src\Importer.cpp" />
     <ClCompile Include="src\nodes\shdProgram.cpp" />
@@ -90,6 +91,7 @@
     <ClCompile Include="src\nodes\node.cpp" />
     <ClCompile Include="src\nodes\Transform.cpp" />
     <ClCompile Include="src\strike.cpp" />
+    <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Importer.h" />
@@ -100,6 +102,8 @@
     <ClInclude Include="include\nodes\Transform.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\PerspectiveCamera.h" />
+    <ClInclude Include="include\Window.h" />
+    <ClInclude Include="include\nodes\Shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

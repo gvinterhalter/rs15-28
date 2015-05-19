@@ -37,7 +37,7 @@ namespace mfe{
 		void gameLoop();
 		void buildDefaultShaders();
 
-		void addMesh(GLfloat * buff, GLuint size);
+		void addMesh(Mesh * mesh);
 		//void addMaterial(); // TODO
 		//void addLight();    // TODO
 
@@ -55,7 +55,7 @@ namespace mfe{
 		Shader * m_fragShader;
 		ShdProgram * m_shdProgram;
 
-		std::vector<Mesh> m_meshList;
+		std::vector<Mesh *> m_meshList;
 
 
 	};

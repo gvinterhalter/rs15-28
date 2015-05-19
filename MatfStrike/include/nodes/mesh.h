@@ -5,7 +5,6 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "shdProgram.h"
 #include "PerspectiveCamera.h"
 
 namespace mfe{
@@ -13,15 +12,15 @@ namespace mfe{
 	class Mesh
 	{
 	public:
-		Mesh(GLfloat * data, GLuint size, ShdProgram * s, PerspectiveCamera & cam);
+		Mesh(GLfloat * data, GLuint size);
 		void draw();
 
+		void connectShadingProgram(GLuint shd);
 		void rotateY(float);
 
 	private:
 		GLuint m_vbo; // vertex buffer object
 		GLuint m_vao; // vertex array object
-		GLuint m_sp;  // shader program
 		glm::mat4 m_transform = glm::mat4(1);
 
 		GLuint m_transformIndex;
