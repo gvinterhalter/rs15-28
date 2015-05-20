@@ -30,7 +30,6 @@ using namespace mfe;
 int main(int argc, char **argv){
 
 	Window win("Test", 800, 600);
-	win.show();
 	win.registerCallbacks( debugKeyboard, NULL, NULL, NULL );
 
 	win.glfwLoop();

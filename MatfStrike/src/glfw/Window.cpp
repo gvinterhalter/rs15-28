@@ -2,6 +2,9 @@
 
 namespace mfe{
 
+	// initialise static memebers of a class
+	std::unordered_map<GLFWwindow *, Window *> Window::allWindows;
+
 	Window::Window(const std::string & title, int w, int h, bool fullScreen)
 		: m_title(title), m_width(w), m_height(h)
 	{
@@ -28,44 +31,20 @@ namespace mfe{
 
 		allWindows[m_window] = this; // used for callbacks
 
-		// set cursor on the center of the screen and chage shape
-		// glfwSetCursorPos(m_window,  m_width / 2, m_height / 2);
-		// glfwSetCursor( m_window, glfwCreateStandardCursor(GLFW_CROSSHAIR_CURSOR) );
-
 		// glew 
 		// NE ZNAM gde da stavim ovo ?
 		glewExperimental = true;
 		glewInit();
 	}
 
-	void Window::show(){
-		glfwMakeContextCurrent(m_window); // now we can use opengl 
-		setOpenGL();
-	}
 
-	void Window::setOpenGL(){
-		glClearColor(0, 0, 0, 1);
-		glEnable(GL_DEPTH_TEST);
-		glEnable(GL_DEPTH_BUFFER_BIT);
-		//glEnable(GL_CULL_FACE);
-	}
-
-	void Window::setCallbacks(){
-		// set callbacks for mouse and keyboard
-		//glfwSetKeyCallback(m_window, key_callback);
-		//glfwSetMouseButtonCallback(m_window, mouseBtn_callback);
-		//glfwSetScrollCallback(m_window, scroll_callback);
-		//glfwSetCursorPosCallback(m_window, cursorPos_callback);
-	}
 
 	void Window::glfwLoop(){
 		while (!glfwWindowShouldClose(m_window)){
-
-			//m_scene->render();
+			glfwMakeContextCurrent(m_window); // we set context to this window 
 
 			glfwSwapBuffers(m_window);
 			glfwPollEvents();
-
 
 			// ESC, for full screen windows
 			if (glfwGetKey(m_window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
