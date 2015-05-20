@@ -1,4 +1,5 @@
 #include "Importer.h"
+#include "nodes/mesh.h"
 
 namespace mfe{
 

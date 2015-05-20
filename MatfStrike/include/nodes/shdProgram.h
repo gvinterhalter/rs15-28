@@ -5,13 +5,14 @@
 #include <GLFW/glfw3.h>
 
 #include <vector>
+#include <memory>
 
-#include "nodes/Shader.h"
 #include "nodes/mesh.h"
-#include "PerspectiveCamera.h"
 
 namespace mfe{
 
+	class Shader;
+	class PerspectiveCamera;
 
 	class ShdProgram
 	{
@@ -21,11 +22,11 @@ namespace mfe{
 		
 
 		void linkProgram();
-		void addMesh(Mesh *mesh);
-		const std::vector<Mesh *> & meshList() { return m_meshList; }
+		void useProgram();
+		GLuint program();
 
-		void useProgram() {glUseProgram(m_shdProgram); }
-		GLuint program() { return m_shdProgram; }
+		const std::vector<Mesh *> & meshList();
+		void addMesh(Mesh *mesh);
 
 	private:
 		std::shared_ptr<Shader> m_vrtxShd;

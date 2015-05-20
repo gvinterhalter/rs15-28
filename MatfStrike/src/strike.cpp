@@ -1,23 +1,3 @@
-#define GLEW_STATIC // we need this because we link with glew32s.lib (static)
-
-
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <fbxsdk.h>
-
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-#include <vector>
-#include <chrono>
-#include <thread>
-
-#include "nodes/transform.h"
-#include "nodes/mesh.h"
-#include <unordered_map>
-
-#include "nodes/shdProgram.h"
-
 #include "Scene.h"
 #include "Importer.h"
 #include "glfw/Window.h"
@@ -49,12 +29,9 @@ int main(int argc, char **argv){
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
+/*
 
 // Shader sources
 static const GLchar* vertexSource =
@@ -152,7 +129,7 @@ int m(int argc, char **argv){
 	glEnableVertexAttribArray(colAttrib);
 	glVertexAttribPointer(colAttrib, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (void*)(3 * sizeof(GLfloat)));
 
-	/* MATRIX MATRIX MATRIX MATRIX MATRIX  MATRIX MATRIX MATRIX MATRIX MATRIX */
+	// MATRIX MATRIX MATRIX MATRIX MATRIX  MATRIX MATRIX MATRIX MATRIX MATRIX 
 	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
 	glm::mat4 Projection = glm::perspective(45.0f, 640.f / 480.f, 0.1f, 100.0f);
 	// Camera matrix
@@ -165,7 +142,7 @@ int m(int argc, char **argv){
 	glm::mat4 Model = glm::mat4(1.0f);  // Changes for each model !
 	// Our ModelViewProjection : multiplication of our 3 matrices
 	glm::mat4 MVP = Projection * View * Model; // Remember, matrix multiplication is the other way around
-	/* MATRIX MATRIX MATRIX MATRIX MATRIX  MATRIX MATRIX MATRIX MATRIX MATRIX */
+	// MATRIX MATRIX MATRIX MATRIX MATRIX  MATRIX MATRIX MATRIX MATRIX MATRIX 
 
 	GLint MatrixID = glGetUniformLocation(shdProg.program(), "MVP");
 	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
@@ -200,5 +177,4 @@ int m(int argc, char **argv){
 	return 0;
 }
 
-
-
+*/

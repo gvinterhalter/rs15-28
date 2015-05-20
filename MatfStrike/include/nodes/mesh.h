@@ -4,7 +4,10 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
+
 namespace mfe{
+
+	class ShdProgram;
 
 	class Mesh
 	{
@@ -21,6 +24,8 @@ namespace mfe{
 		glm::mat4 m_transform = glm::mat4(1);
 
 		GLuint m_transformIndex;
+
+		ShdProgram * shd; 
 
 		GLfloat* m_data;
 		GLuint m_data_size;

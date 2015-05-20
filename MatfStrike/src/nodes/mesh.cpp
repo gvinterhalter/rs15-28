@@ -4,6 +4,8 @@
 #include <glm/gtc/matrix_transform.hpp>	
 #include <glm/gtc/type_ptr.hpp>	
 
+#include "nodes/shdProgram.h"
+
 namespace mfe{
 
 	Mesh::Mesh(GLfloat * data, unsigned int size) 

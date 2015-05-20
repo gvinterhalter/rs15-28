@@ -3,6 +3,9 @@
 #include <iostream>
 #include "Exception.h"
 
+#include "PerspectiveCamera.h"
+#include "nodes/Shader.h"
+
 namespace mfe{
 
 		ShdProgram::~ShdProgram()
@@ -35,10 +38,15 @@ namespace mfe{
 			throw GlslLinkErr();
 		}
 
+		void ShdProgram::useProgram() {glUseProgram(m_shdProgram); }
+		GLuint ShdProgram::program() { return m_shdProgram; }
+		const std::vector<Mesh *> & ShdProgram::meshList() { return m_meshList; }
+
 
 		void ShdProgram::addMesh(Mesh *mesh){
 			m_meshList.push_back(mesh);
 			mesh->connectShadingProgram(m_shdProgram);
 		}
+
 
 }
