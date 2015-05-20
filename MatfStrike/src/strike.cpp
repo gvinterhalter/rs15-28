@@ -18,8 +18,8 @@
 
 #include "nodes/shdProgram.h"
 
-//#include "Scene.h"
-//#include "Importer.h"
+#include "Scene.h"
+#include "Importer.h"
 #include "glfw/Window.h"
 
 using namespace mfe;
@@ -29,20 +29,20 @@ using namespace mfe;
 
 int main(int argc, char **argv){
 
-	Window win("Test", 800, 600);
-	win.registerCallbacks( debugKeyboard, NULL, NULL, NULL );
+	//Window win("Test", 800, 600);
+	//win.registerCallbacks( debugKeyboard, NULL, NULL, NULL );
 
-	win.glfwLoop();
-	//Scene scn(640, 1024, "Pera");
-	////Scene scn("fullScreen");
+	//win.glfwLoop();
+	Scene scn(640, 1024, "Pera");
+	//Scene scn("fullScreen");
 
-	//{
-	//	Importer imp(scn);
-	//	imp.importScene("../test_resources/vojnik.fbx");
-	//}
+	{
+		Importer imp(scn);
+		imp.importScene("../test_resources/vojnik.fbx");
+	}
 
 
-	//scn.gameLoop();
+	scn.gameLoop();
 	return 0;
 }
 
